@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MAIN_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+MAIN_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -104,10 +104,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (
- os.path.join(BASE_DIR, 'templates'),
+ os.path.join(MAIN_DIR, 'templates'),
  )
 STATICFILES_DIRS = (
- os.path.join(BASE_DIR, 'static'),
+ os.path.join(MAIN_DIR, 'static'),
  )
 
 STATIC_ROOT = 'staticfiles'
